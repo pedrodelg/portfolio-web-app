@@ -1,6 +1,6 @@
-# portfolio-rest-api
+# portfolio-web-app
 
-Part II
+Part I
 
 Steps to get the application up and running
 
