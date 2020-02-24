@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>Portfolio</title>
+
+</head>
+
+<body>
+
+	<div>Title: </div> <div th:text="${portfolioValue.title}"></div>
+	<br>
+	
+	<div>Description: </div> <div th:text="${portfolioValue.description}"></div> 
+	<br>
+	
+	<div>Twitter user name: </div> <div th:text="${portfolioValue.twitterUserName}"></div>
+	
+	<br>
+	<div>
+		<img th:src="${portfolioValue.imageUrl}" >	
+	</div>
+
+<br>
+
+	<table border="1">
+		<thead >
+			<tr>
+				<th>Screen name</th>
+				<th>Profile Image</th>
+				<th>Tweet</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr th:each="tweet : ${tweetValue}">
+			
+				<td th:text="${tweet.screenName}" />	
+				<td th:src="${tweet.profileImageUrl}" />	
+				<td th:text="${tweet.text}" />	
+				
+			</tr>
+		</tbody>		
+	</table>
+
+
+
+</body>
+
+</html>
+
+
+
+
